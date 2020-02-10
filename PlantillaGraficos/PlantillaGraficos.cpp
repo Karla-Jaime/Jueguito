@@ -21,7 +21,7 @@ double velTriangulo = 0.5;
 float angulo = 0.0f;
 float componenteX;
 float componenteY;
-float velAngular = 90.0f;
+float velAngular = 92.0f;
 
 void actualizar() {
 	
