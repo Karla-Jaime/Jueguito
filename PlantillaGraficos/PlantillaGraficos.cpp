@@ -86,8 +86,6 @@ void actualizar() {
 	}
 	tiempoAnterior = tiempoActual;
 
-
-
 }
 
 
@@ -109,28 +107,11 @@ void dibujarTriangulo() {
 	glPopMatrix();
 
 }
-void estrellas() {
-	glBegin(GL_POINTS);
-	glColor3f(1.0f, 1.0f, 1.0f);
 
-	glVertex3f(0.0f, 0.20f, 0.0f);
-	glVertex3f(-0.15f, -0.15f, 0.0f);
-	glVertex3f(0.15f, -0.3f, 0.0f);
-
-	glVertex3f(0.5f, 0.3f, 0.0f);
-	glVertex3f(-0.3f, -0.45f, 0.0f);
-	glVertex3f(0.9f, -0.7f, 0.0f);
-
-	glVertex3f(-0.7f, 0.20f, 0.0f);
-	glVertex3f(-0.25f, 0.75f, 0.0f);
-	glVertex3f(0.15f, -0.3f, 0.0f);
-	glEnd();
-}
 
 
 void dibujar() {
 	dibujarTriangulo();
-	estrellas();
 }
 
 int main()
