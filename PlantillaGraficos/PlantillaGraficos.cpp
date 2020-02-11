@@ -15,6 +15,17 @@ using namespace std;
 GLFWwindow* window;
 
 float posXTriangulo = 0.0f, posYTriangulo = 0.0f;
+
+
+float posXCuadrado = 0.5f, posYCuadrado = 0.5f;
+float posXCuadrado2 = -1.0f, posYCuadrado2 = 1.0f;
+
+
+
+
+
+
+
 double tiempoActual, tiempoAnterior;
 
 double velTriangulo = 0.5;
@@ -99,7 +110,7 @@ void dibujarTriangulo() {
 	glBegin(GL_TRIANGLES);
     glColor3f(1.0f,1.0f,1.0f);
 
-	glVertex3f(0.0f,0.25f,0.0f);
+	glVertex3f(0.0f,0.15f,0.0f);
 	glVertex3f(-0.15f, -0.15f, 0.0f); 
 	glVertex3f(0.15f, -0.15f, 0.0f);
 
@@ -108,9 +119,46 @@ void dibujarTriangulo() {
 
 }
 
+void laberinto() {
+	glPushMatrix();
 
+	glTranslatef(posXCuadrado, posYCuadrado, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.3f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0f, 1.0f, 1.0f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+
+
+	glEnd();
+	glPopMatrix();
+	glPushMatrix();
+
+	glTranslatef(posXCuadrado2, posYCuadrado2, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.3f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0f, 1.0f, 1.0f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(1.0f, 0.15f, 0.0f);
+	glVertex3f(1.0f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+
+
+	glEnd();
+	glPopMatrix();
+
+}
 
 void dibujar() {
+	laberinto();
 	dibujarTriangulo();
 }
 
