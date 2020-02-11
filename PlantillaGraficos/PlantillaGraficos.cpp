@@ -43,6 +43,20 @@ void actualizar() {
 
 		posXTriangulo += componenteX;
 		posYTriangulo += componenteY;
+
+		if (posXTriangulo <= -1.00) {
+			exit(1);
+		}
+		else if (posXTriangulo >= 1.00) {
+			exit(1);
+		}
+
+		if (posYTriangulo <= -1.08) {
+			exit(1);
+		}
+		else if (posYTriangulo >= 1.00) {
+			exit(1);
+		}
 	}
 
 	int estadoIzquierda = glfwGetKey(window, GLFW_KEY_LEFT);
@@ -52,9 +66,27 @@ void actualizar() {
 	}
 	int estadoAbajo = glfwGetKey(window, GLFW_KEY_DOWN);
 	if (estadoAbajo == GLFW_PRESS) {
+
 		posYTriangulo -= velTriangulo * tiempoDiferencial;
+
+		if (posXTriangulo <= -1.08) {
+			exit(1);
+		}
+		else if (posXTriangulo >= 1.08) {
+			exit(1);
+		}
+
+		if (posYTriangulo <= -1.08) {
+			exit(1);
+		}
+		else if (posYTriangulo >= 1.08) {
+			exit(1);
+			
+		}
 	}
 	tiempoAnterior = tiempoActual;
+
+
 
 }
 
@@ -111,7 +143,7 @@ int main()
 	if (!glfwInit()) {
 		exit(EXIT_FAILURE);
 	}
-	window = glfwCreateWindow(600, 600, "Ventana Cookie", NULL, NULL);
+	window = glfwCreateWindow(700, 750, "Ventana Cookie", NULL, NULL);
 	
 	//Si no se pudo crear la ventana
 	//Terminamos ejecución
@@ -148,7 +180,7 @@ int main()
 	while (!glfwWindowShouldClose(window)) {
 
 		//Establecer región de dibujo 
-		glViewport(0, 0, 600, 600);
+		glViewport(0, 0, 700, 750);
 		//Establecemos el color de borrado
 		glClearColor(0, 0, 0, 1);
 		//Borrar
