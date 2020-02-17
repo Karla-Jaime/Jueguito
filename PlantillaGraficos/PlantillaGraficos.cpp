@@ -42,7 +42,21 @@ float posXrec17 = -0.5f, posYrec17 = 0.8f;
 float posXrec18 = -0.15f, posYrec18 = 0.8f;
 
 float posXrec19 = 0.1f, posYrec19 = 0.8f;
-float posXrec20 = 0.4f, posYrec20 = 0.8f;
+float posXrec20 = 0.4f, posYrec20 = 0.6f;
+
+float posXrec21 = 0.6f, posYrec21 = 0.5f;
+float posXrec22 = -0.1f, posYrec22 = -0.6f;
+
+float posXrec23 = 0.75f, posYrec23 = 0.2f;
+float posXrec24 = 0.2f, posYrec24 = -0.6f;
+
+float posXrec25 = -0.5f, posYrec25 = -0.2f;
+float posXrec26 = -0.5f, posYrec26 = -0.5f;
+
+float posXrec27 = 0.75f, posYrec27 = -0.2f;
+
+float posXrec28 = 0.75f, posYrec28 = -0.5f;
+float posXrec29 = 0.5f, posYrec29 = -0.6f;
 
 double tiempoActual, tiempoAnterior;
 
@@ -279,7 +293,7 @@ void laberinto() {
 	glPushMatrix();
 	glTranslatef(posXrec2, posYrec2, 0.0f);
 	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
-	glScalef(0.5f, 0.3f, 0.0f);
+	glScalef(0.8f, 0.3f, 0.0f);
 
 	glBegin(GL_QUADS);
 	glColor3f(0.39f, 0.1f, 0.1f);
@@ -294,7 +308,7 @@ void laberinto() {
 	glPushMatrix();
 	glTranslatef(posXrec3, posYrec3, 0.0f);
 	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
-	glScalef(0.5f, 0.3f, 0.0f);
+	glScalef(0.8f, 0.3f, 0.0f);
 
 	glBegin(GL_QUADS);
 	glColor3f(0.39f, 0.1f, 0.1f);
@@ -491,6 +505,143 @@ void laberinto() {
 	glPushMatrix();
 	glTranslatef(posXrec20, posYrec20, 0.0f);
 	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.8f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//21
+	glPushMatrix();
+	glTranslatef(posXrec21, posYrec21, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.8f, 0.3f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//22
+	glPushMatrix();
+	glTranslatef(posXrec22, posYrec22, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.8f, 0.3f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//23
+	glPushMatrix();
+	glTranslatef(posXrec23, posYrec23, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.8f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//24
+	glPushMatrix();
+	glTranslatef(posXrec24, posYrec24, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.8f, 0.3f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//25
+	glPushMatrix();
+	glTranslatef(posXrec25, posYrec25, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.8f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//26
+	glPushMatrix();
+	glTranslatef(posXrec26, posYrec26, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.8f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+
+	//Casi
+		//27
+	glPushMatrix();
+	glTranslatef(posXrec27, posYrec27, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.8f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//28
+	glPushMatrix();
+	glTranslatef(posXrec28, posYrec28, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	glScalef(0.3f, 0.8f, 0.0f);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.39f, 0.1f, 0.1f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glEnd();
+	glPopMatrix();
+	//29
+	glPushMatrix();
+	glTranslatef(posXrec29, posYrec29, 0.0f);
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
 	glScalef(0.8f, 0.3f, 0.0f);
 
 	glBegin(GL_QUADS);
@@ -519,7 +670,7 @@ int main()
 	if (!glfwInit()) {
 		exit(EXIT_FAILURE);
 	}
-	window = glfwCreateWindow(700, 750, "Ventana Cookie", NULL, NULL);
+	window = glfwCreateWindow(600, 600, "Ventana Cookie", NULL, NULL);
 	
 	//Si no se pudo crear la ventana
 	//Terminamos ejecución
@@ -556,7 +707,7 @@ int main()
 	while (!glfwWindowShouldClose(window)) {
 
 		//Establecer región de dibujo 
-		glViewport(0, 0, 700, 750);
+		glViewport(0, 0, 600, 650);
 		//Establecemos el color de borrado
 		glClearColor(0, 0, 0, 1);
 		//Borrar
