@@ -66,70 +66,6 @@ float componenteX;
 float componenteY;
 float velAngular = 92.0f;
 
-void actualizar() {
-	
-	
-	tiempoActual = glfwGetTime();
-	double tiempoDiferencial = tiempoActual - tiempoAnterior;
-
-	int estadoDerecha = glfwGetKey(window, GLFW_KEY_RIGHT);
-	if (estadoDerecha == GLFW_PRESS) {
-		
-		angulo -= velAngular * tiempoDiferencial;		
-	}
-	int estadoArriba = glfwGetKey(window, GLFW_KEY_UP);
-	if (estadoArriba == GLFW_PRESS) {
-		//posYTriangulo += velTriangulo * tiempoDiferencial;
-
-		componenteX = (cos((angulo + 90.0) * 3.141592 / 180.0)) * (velTriangulo * tiempoDiferencial);
-		componenteY = (sin((angulo + 90.0) * 3.141592 / 180.0)) * (velTriangulo * tiempoDiferencial);
-
-		posXTriangulo += componenteX;
-		posYTriangulo += componenteY;
-
-		if (posXTriangulo <= -1.00) {
-			exit(1);
-		}
-		else if (posXTriangulo >= 1.00) {
-			exit(1);
-		}
-
-		if (posYTriangulo <= -1.08) {
-			exit(1);
-		}
-		else if (posYTriangulo >= 1.00) {
-			exit(1);
-		}
-	}
-
-	int estadoIzquierda = glfwGetKey(window, GLFW_KEY_LEFT);
-	if (estadoIzquierda == GLFW_PRESS) {
-		
-		angulo += 90.00f * tiempoDiferencial;		
-	}
-	int estadoAbajo = glfwGetKey(window, GLFW_KEY_DOWN);
-	if (estadoAbajo == GLFW_PRESS) {
-
-		posYTriangulo -= velTriangulo * tiempoDiferencial;
-
-		if (posXTriangulo <= -1.08) {
-			exit(1);
-		}
-		else if (posXTriangulo >= 1.08) {
-			exit(1);
-		}
-
-		if (posYTriangulo <= -1.08) {
-			exit(1);
-		}
-		else if (posYTriangulo >= 1.08) {
-			exit(1);
-			
-		}
-	}
-	tiempoAnterior = tiempoActual;
-
-}
 
 
 void dibujarTriangulo() {
@@ -148,6 +84,17 @@ void dibujarTriangulo() {
 
 	glEnd();
 	glPopMatrix();
+
+}
+void colisiones() {
+	
+	if (
+		posXTriangulo - 0.15f <= posXrec29 + 0.15f &&
+		posYTriangulo - 0.15f <= posYrec29 &&
+		posXTriangulo + 0.15f >= posXrec29 - 0.15f &&
+		posYTriangulo + 0.15f >= posYrec29 ) {
+		exit(1);
+	}
 
 }
 
@@ -653,6 +600,71 @@ void laberinto() {
 	glVertex3f(-0.15f, -0.15f, 0.0f);
 	glEnd();
 	glPopMatrix();
+}
+void actualizar() {
+	
+	
+	tiempoActual = glfwGetTime();
+	colisiones();
+	double tiempoDiferencial = tiempoActual - tiempoAnterior;
+
+	int estadoDerecha = glfwGetKey(window, GLFW_KEY_RIGHT);
+	if (estadoDerecha == GLFW_PRESS) {
+		
+		angulo -= velAngular * tiempoDiferencial;		
+	}
+	int estadoArriba = glfwGetKey(window, GLFW_KEY_UP);
+	if (estadoArriba == GLFW_PRESS) {
+		//posYTriangulo += velTriangulo * tiempoDiferencial;
+
+		componenteX = (cos((angulo + 90.0) * 3.141592 / 180.0)) * (velTriangulo * tiempoDiferencial);
+		componenteY = (sin((angulo + 90.0) * 3.141592 / 180.0)) * (velTriangulo * tiempoDiferencial);
+
+		posXTriangulo += componenteX;
+		posYTriangulo += componenteY;
+
+		if (posXTriangulo <= -1.00) {
+			exit(1);
+		}
+		else if (posXTriangulo >= 1.00) {
+			exit(1);
+		}
+
+		if (posYTriangulo <= -1.08) {
+			exit(1);
+		}
+		else if (posYTriangulo >= 1.00) {
+			exit(1);
+		}
+	}
+
+	int estadoIzquierda = glfwGetKey(window, GLFW_KEY_LEFT);
+	if (estadoIzquierda == GLFW_PRESS) {
+		
+		angulo += 90.00f * tiempoDiferencial;		
+	}
+	int estadoAbajo = glfwGetKey(window, GLFW_KEY_DOWN);
+	if (estadoAbajo == GLFW_PRESS) {
+
+		posYTriangulo -= velTriangulo * tiempoDiferencial;
+
+		if (posXTriangulo <= -1.08) {
+			exit(1);
+		}
+		else if (posXTriangulo >= 1.08) {
+			exit(1);
+		}
+
+		if (posYTriangulo <= -1.08) {
+			exit(1);
+		}
+		else if (posYTriangulo >= 1.08) {
+			exit(1);
+			
+		}
+	}
+	tiempoAnterior = tiempoActual;
+
 }
 
 void dibujar() {
