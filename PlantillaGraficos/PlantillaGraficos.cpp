@@ -15,7 +15,7 @@ using namespace std;
 GLFWwindow* window;
 
 float posXTriangulo = 0.0f, posYTriangulo = 0.0f;
-
+float posXTriangulo2 = 0.6f, posYTriangulo2 = -0.5f;
 
 float posXCuadrado = 0.15f, posYCuadrado = 0.15f;
 float posXCuadrado2 = -0.15f, posYCuadrado2 = -0.15f;
@@ -600,6 +600,26 @@ void laberinto() {
 	glVertex3f(-0.15f, -0.15f, 0.0f);
 	glEnd();
 	glPopMatrix();
+	////////
+	glPushMatrix();
+
+	glTranslatef(posXTriangulo2,posYTriangulo2,0.0f);	
+	glRotatef(0.0f, 0.0f, 0.0f, 1.0);
+	
+
+	glBegin(GL_TRIANGLES);
+    glColor3f(0.91f,0.71f,0.22f);
+
+	glVertex3f(0.0f,0.05f,0.0f);
+	glVertex3f(-0.05f, -0.05f, 0.0f); 
+	glVertex3f(0.05f, -0.05f, 0.0f);
+
+	glEnd();
+	glPopMatrix();
+
+	/////
+
+
 }
 void actualizar() {
 	
